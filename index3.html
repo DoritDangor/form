@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz"
+        crossorigin="anonymous">
+    <title>אפשרי בריא</title>
+</head>
+
+<body class="bg-light">
+    <!--body container-->
+    <div class="container">
+        <div class="py-5 mx-5 px-5 text-center">
+            <img class="d-block mx-auto mb-4" src="לוגו בלי רקע.png" alt="לוגו מכון תובנות" width="105" height="85">
+            <h2 class="text-secondary font-weight-bold">אפשריבריא - תיעוד פעילות יישובית</h2>
+            <p class="lead text-secondary"> מוסן מנת. קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור,
+                קראס אגת לקטו וסטיבולום סוליסי טידום בעליק. נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי. </p>
+        </div>
+        <!--main card-->
+        <div class="card mx-auto" style="width: 85%;">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning font-weight-bold" href="#staffMeetingForm" id="staffMeetingForm-tab" data-toggle="tab"
+                            role="tab" aria-controls="staffMeetingForm" aria-selected="true">ישיבות צוות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning font-weight-bold" href="#activities" id="activities-tab" data-toggle="tab" role="tab" aria-controls="activities"
+                            aria-selected="true">פעילויות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning font-weight-bold " href="#training" id="training-tab" data-toggle="tab" role="tab" aria-controls="training"
+                            aria-selected="true">הכשרות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning font-weight-bold" href="#workshops" id="workshops-tab" data-toggle="tab" role="tab" aria-controls="workshops"
+                            aria-selected="true">סדנאות</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--כרטיס ישיבות צוות-->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="staffMeetingForm" role="tabpanel" aria-labelledby="staffMeetingForm-tab">
+                    <div class="card-body" id="staffMeetingForm">
+                        <!--טופס ישיבות צוות-->
+                        <form role="form" id="test-form">
+                            <div class="card-header text-white bg-info border-bottom-1 border-warning">
+                                <div>ישיבות צוות</div>
+                            </div>
+                            <div class="card card-body border-warning ">
+                                <div class="form-group">
+                                    <label for="staffMeetingCity">שם היישוב</label>
+                                    <select name="city" class="form-control" id="staffMeetingCity">
+                                        <option value="">-----</option>
+                                        <option value="1">ירושלים</option>
+                                        <option value="2">דלית אל כרמל</option>
+                                        <option value="3">דימונה</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staffMeetingDate">תאריך</label>
+                                    <input type="date" name="date" class="form-control" id="staffMeetingDate">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="guide" id="staffMeetingYESManche" value="yes" checked>
+                                    <label class="form-check-label" for="staffMeetingYESManche">
+                                        בנוכחות מנחה אזורי
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="guide" id="staffMeetingNOManche" value="no">
+                                    <label class="form-check-label" for="staffMeetingNOManche">
+                                        ללא מנחה אזורי
+                                    </label>
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                    <label for="present">נוכחים בישיבה</label>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <input type="text" name="name1" id="present" class="form-control" placeholder="שם">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <input type="text" name="role1" id="present" class="form-control" placeholder="תפקיד">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <input type="text" name="name2" id="present" class="form-control" placeholder="שם">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <input type="text" name="role2" id="present" class="form-control" placeholder="תפקיד">
+                                        </div>
+                                    </div>
+                                    <a data-toggle="collapse" data-parent="#collapseNameAndRole" href="#collapseNameAndRole" aria-expanded="false" aria-controls="collapseNameAndRole">
+                                        <span class="">+ אנשי צוות נוספים</span>
+                                    </a>
+                                    <div id="collapseNameAndRole" class="collapse">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="name3" id="present" class="form-control" placeholder="שם">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="role3" id="present" class="form-control" placeholder="תפקיד">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="name4" id="present" class="form-control" placeholder="שם">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="role4" id="present" class="form-control" placeholder="תפקיד">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="name5" id="present" class="form-control" placeholder="שם">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="role5" id="present" class="form-control" placeholder="תפקיד">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="name6" id="present" class="form-control" placeholder="שם">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="text" name="role6" id="present" class="form-control" placeholder="תפקיד">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mainSubjects"> הנושאים המרכזיים שעלו בישיבות הצוות</label>
+                                    <textarea class="form-control" name="mainTopics" id="mainSubjects" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="topicsPromoted">נושאים שקודמו בתכנית על פי סדר חשיבות</label>
+                                    <textarea class="form-control" name="topicsPromoted" id="topicsPromoted" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stoppers"> חסמים / גורמים מעכבים את יישום התכנית</label>
+                                    <textarea class="form-control" name="stoppers" id="stoppers" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cooperation"> שיתוף פעולה עם גופים נוספים ברשות</label>
+                                    <textarea class="form-control" name="cooperation" id="cooperation" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-info" id="postForm">שמור</button>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-pane fade show active" id="activities" role="tabpanel" aria-labelledby="activities-tab">
+                    <div class="card-body" id="activities">
+                        <form action="">
+                            <div class="card-header text-white bg-info">
+                                <div class="" role="alert">
+                                    פעילויות
+                                </div>
+                            </div>
+                            <div class="card card-body border-warning">
+
+                                <div class="form-group">
+                                    <label for="city">שם היישוב</label>
+                                    <select class="form-control" id="city">
+                                        <option>-----</option>
+                                        <option>ירושלים</option>
+                                        <option>דלית אל כרמל</option>
+                                        <option>דימונה</option>
+                                    </select>
+                                </div>
+                                <div class="card-header" role="tab" id="headinggiusHorimLesadnaot">
+                                    <a data-toggle="collapse" data-parent="#giusHorimLesadnaot" href="#giusHorimLesadnaot" aria-expanded="false" aria-controls="giusHorimLesadnaot">
+                                        <h6 class="mt-1 mb-1">
+                                            <span>+ פעילות גיוס הורים לסדנאות </span>
+                                        </h6>
+                                    </a>
+                                </div>
+                                <div id="giusHorimLesadnaot" class="collapse">
+                                    <div class="card card-body">
+                                        <div class="form-group">
+                                            <label for="giusHorimLesadnaotDate">תאריך</label>
+                                            <input type="date" class="form-control" id="giusHorimLesadnaotDate">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nameAndRole">מי מבצע</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="שם">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="תפקיד">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="שם">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="תפקיד">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="details">פרטים</label>
+                                            <textarea class="form-control" id="details" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+
+
+
+                                <div class="card-header" role="tab" id="headingYemeiShie">
+                                    <a data-toggle="collapse" data-parent="#YemeiShie" href="#YemeiShie" aria-expanded="false" aria-controls="YemeiShie">
+                                        <h6 class="mt-1 mb-1">
+                                            <span>+ ימי שיא / חשיפה / פעילות מיוחדת </span>
+                                        </h6>
+                                    </a>
+                                </div>
+                                <div id="YemeiShie" class="collapse">
+                                    <div class="card card-body">
+                                        <div class="form-group">
+                                            <label for="giusHorimLesadnaotDate">תאריך</label>
+                                            <input type="date" class="form-control" id="giusHorimLesadnaotDate">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nameAndRole">מי מבצע</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="שם">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="תפקיד">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="שם">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="תפקיד">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="details">פרטים</label>
+                                            <textarea class="form-control" id="details" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+
+
+                                <div class="card-header" role="tab" id="headingSuperVision">
+                                    <a data-toggle="collapse" data-parent="#superVision" href="#superVision" aria-expanded="false" aria-controls="superVision">
+                                        <h6 class="mt-1 mb-1">
+                                            <span>+ סופרויז'ן למנחי קבוצות הורים </span>
+                                        </h6>
+                                    </a>
+                                </div>
+                                <div id="superVision" class="collapse">
+                                    <div class="card card-body">
+                                        <div class="form-group">
+                                            <label for="giusHorimLesadnaotDate">תאריך</label>
+                                            <input type="date" class="form-control" id="giusHorimLesadnaotDate">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nameAndRole">מי מבצע</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="שם">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="תפקיד">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="שם">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="תפקיד">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="details">פרטים</label>
+                                            <textarea class="form-control" id="details" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-info">שמור</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-pane fade show active" id="training" role="tabpanel" aria-labelledby="training-tab">
+                    <div class="card-body" id="training">
+                        <form action="">
+                            <div class="card-header text-white bg-info">
+                                <div class="" role="alert">
+                                    הכשרות
+                                </div>
+                            </div>
+                            <div class="card card-body border-warning">
+
+                                <div class="form-group">
+                                    <label for="city">שם היישוב</label>
+                                    <select class="form-control" id="city">
+                                        <option>-----</option>
+                                        <option>ירושלים</option>
+                                        <option>דלית אל כרמל</option>
+                                        <option>דימונה</option>
+                                    </select>
+                                </div>
+                                <div class="card-header" role="tab" id="headingTrningLiba">
+                                    <a data-toggle="collapse" data-parent="#trningLiba" href="#trningLiba" aria-expanded="false" aria-controls="trningLiba">
+                                        <h6 class="mt-1 mb-1">
+                                            <span>+ הכשרות ליבה </span>
+                                        </h6>
+                                    </a>
+                                </div>
+                                <div id="trningLiba" class="collapse">
+                                    <div class="card card-body">
+                                        <div class="form-group">
+                                            <label for="nameAndRole">תאריך ומספר משתתפים בהכשרה</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="number" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                </div>
+                                            </div>
+                                            <a data-toggle="collapse" data-parent="#collapseDateAndNumber" href="#collapseDateAndNumber" aria-expanded="false" aria-controls="collapseDateAndNumber">
+                                                <span class="">+ תאריכים נוספים</span>
+                                            </a>
+                                            <div id="collapseDateAndNumber" class="collapse">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="card-header" role="tab" id="headingTrningHorim">
+                                    <a data-toggle="collapse" data-parent="#trningHorim" href="#trningHorim" aria-expanded="false" aria-controls="trningHorim">
+                                        <h6 class="mt-1 mb-1">
+                                            <span>+ הכשרות מנחי סדנאות הורים </span>
+                                        </h6>
+                                    </a>
+                                </div>
+                                <div id="trningHorim" class="collapse">
+                                    <div class="card card-body">
+                                        <div class="form-group">
+                                            <label for="nameAndRole">תאריך ומספר משתתפים בהכשרה</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                </div>
+                                            </div>
+                                            <a data-toggle="collapse" data-parent="#collapseDateAndNumberHorim" href="#collapseDateAndNumberHorim" aria-expanded="false"
+                                                aria-controls="collapseDateAndNumberHorim">
+                                                <span class="">+ תאריכים נוספים</span>
+                                            </a>
+                                            <div id="collapseDateAndNumberHorim" class="collapse">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <br/>
+
+
+
+                                <div class="card-header" role="tab" id="headingTrningPrivate">
+                                    <a data-toggle="collapse" data-parent="#trningPrivate" href="#trningPrivate" aria-expanded="false" aria-controls="trningPrivate">
+                                        <h6 class="mt-1 mb-1">
+                                            <span>+ הכשרות ליווי פרטני </span>
+                                        </h6>
+                                    </a>
+                                </div>
+                                <div id="trningPrivate" class="collapse">
+                                    <div class="card card-body">
+                                        <div class="form-group">
+                                            <label for="nameAndRole">תאריך ומספר משתתפים בהכשרה</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                </div>
+                                            </div>
+                                            <a data-toggle="collapse" data-parent="#collapseDateAndNumberPrivate" href="#collapseDateAndNumberPrivate" aria-expanded="false"
+                                                aria-controls="collapseDateAndNumberPrivate">
+                                                <span class="">+ תאריכים נוספים</span>
+                                            </a>
+                                            <div id="collapseDateAndNumberPrivate" class="collapse">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר משתתפים">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="פרטים נוספים">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <br/>
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-info">שמור</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+                <div class="tab-pane fade show active" id="workshops" role="tabpanel" aria-labelledby="workshops-tab">
+                    <div class="card-body" id="workshops">
+                        <form action="">
+                            <div class="card-header text-white bg-info">
+                                <div class="" role="alert">
+                                    סדנאות
+                                </div>
+                            </div>
+                            <div class="card card-body border-warning">
+
+                                <div class="form-group">
+                                    <label for="city">שם היישוב</label>
+                                    <select class="form-control" id="city">
+                                        <option>-----</option>
+                                        <option>ירושלים</option>
+                                        <option>דלית אל כרמל</option>
+                                        <option>דימונה</option>
+                                    </select>
+                                </div>
+
+
+                                <div id="" class="">
+                                    <div class="card card-body">
+                                        <div class="form-group">
+                                            <label for="nameAndRole">סדנאות הורים</label>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="  מספר הורים משתתפים בסדנאות">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="מספר הורים בתכנית ליווי פרטני ">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="  מספר הורים משתתפים בסדנאות">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <input type="text" id="nameAndRole" class="form-control" placeholder="מספר הורים בתכנית ליווי פרטני ">
+                                                </div>
+                                            </div>
+                                            <a data-toggle="collapse" data-parent="#collapseDateAndNumberWorkshop" href="#collapseDateAndNumberWorkshop" aria-expanded="false"
+                                                aria-controls="collapseDateAndNumberWorkshop">
+                                                <span class="">+ תאריכים נוספים</span>
+                                            </a>
+                                            <div id="collapseDateAndNumberWorkshop" class="collapse">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="  מספר הורים משתתפים בסדנאות">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר הורים בתכנית ליווי פרטני ">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="  מספר הורים משתתפים בסדנאות">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר הורים בתכנית ליווי פרטני ">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <input type="date" id="nameAndRole" class="form-control" placeholder="תאריך">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="  מספר הורים משתתפים בסדנאות">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <input type="text" id="nameAndRole" class="form-control" placeholder="מספר הורים בתכנית ליווי פרטני ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <br/>
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-info">שמור</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">
+                <a href="http://www.tovanot.com"> &copy; מכון תובנות - 2018 </a>
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js" integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    
+
+</body>
+<footer>
+    <script src="validation-functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</footer>
+</html>
